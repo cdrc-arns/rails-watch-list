@@ -1,0 +1,6 @@
+<h4>Add a plant</h4>
+      <%= simple_form_for [ @list, @bookmark ] do |f| %>
+        <%= f.input :comment, placeholder: "your comment" %>
+        <%= f.association :movie %>
+        <%= f.submit "Add" %>
+      <% end %>

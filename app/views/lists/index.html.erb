@@ -1,0 +1,13 @@
+
+<tbody>
+<h1>Save any kind of movies</h1>
+<h2>classics</h2>
+
+    <% @lists.each do |list| %>
+      <tr>
+        <td><%= link_to list.name, list %></td>
+      </tr>
+    <% end %>
+    <br>
+    <%= link_to 'New List', new_list_path %>
+  </tbody>

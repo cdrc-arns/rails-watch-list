@@ -1,6 +1,20 @@
-<h4>Add a plant</h4>
-      <%= simple_form_for [ @list, @bookmark ] do |f| %>
-        <%= f.input :comment, placeholder: "your comment" %>
+<tbody>
+  <div class="banner">
+    <div class="banner-container">
+      <h1 class="index-title">New bookmark</h1>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <div class="form">
+      <div class="form-infos">
+        <%= simple_form_for [ @list, @bookmark ] do |f| %>
+        <%= f.input :comment, placeholder: "your comment", class: "comment" %>
         <%= f.association :movie %>
-        <%= f.submit "Add" %>
-      <% end %>
+        <%= f.submit "Add", class: "create-btn" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</tbody>

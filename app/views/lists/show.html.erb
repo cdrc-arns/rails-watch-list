@@ -1,13 +1,27 @@
-<h1><%= @list.name%></h1>
-<% @list.bookmarks.each do |bookmark| %>
- <li>
-    <%=bookmark.movie[:title]%>
-    <img src="https://image.tmdb.org/t/p/w500/<%=bookmark.movie[:poster_url]%>" alt="">
-    <%=bookmark.movie[:overview]%>
-    <%=bookmark.comment%>
-    <%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' } %>
-</li>
-<% end %>
-<br>
-<%= link_to 'Add a bookmark', new_list_bookmark_path(@list)%>
-<%= link_to 'Back to your lists', lists_path%>
+<div class="banner">
+    <div class="banner-container">
+        <h1 class="index-title"><%= @list.name%></h1>
+        <div class="button">
+          <%= link_to 'Add a bookmark', new_list_bookmark_path(@list), class: "create-btn"%>
+        </div>
+    </div>
+  </div>
+<div class="bookmark-card-container">
+  <div class="bookmark-cards">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="bookmark-card">
+          <img src="https://image.tmdb.org/t/p/w500/<%=bookmark.movie[:poster_url]%>" alt="">
+        <div class="card-infos">
+          <h5><%= bookmark.movie[:title]%></h5>
+          <p class="overview"><%= bookmark.movie[:overview]%></p>
+          <p class="comment">"<%= bookmark.comment%>"</p>
+          <p class="btn"><%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-btn" %></p>
+        </div>
+      </div>
+    <% end %>
+    <div class="redirect">
+      <%= link_to 'Back to your lists', lists_path, class: "create-btn"%>
+    </div>
+  </div>
+
+</div>

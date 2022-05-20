@@ -1,3 +1,211 @@
 // Place all the styles related to the Lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// BANNER
+.banner {
+  background: {
+    image: asset_url("machete1000.jpg");
+ }
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  display: block;
+}
+
+.banner-container {
+  width: 1000px;
+  margin: auto;
+  padding-bottom: 60px;
+}
+
+.index-title {
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 48px;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.button {
+  text-align: center;
+}
+
+// CONTAINER
+.card-container {
+  margin: auto;
+  padding-bottom: 0;
+}
+
+h2 {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.cards {
+  display: flex;
+  padding-bottom: 60px;
+  justify-content: space-around;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  align-items: center;
+}
+
+.card {
+  background: {
+    image: asset_url("danny300.jpg");
+ }
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230,230,230);
+}
+
+.link-text {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 2px;
+
+  &:hover {
+    color: orangered;
+    text-decoration: none;
+  }
+}
+
+// BUTTON
+.create-btn {
+  text-align: center;
+  background-color: black;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px 36px;
+  border-radius: 10px;
+  color: white;
+
+  &:hover {
+    text-decoration: none;
+    color: orangered;
+  }
+}
+
+// LISTS
+
+.bookmark-title {
+  text-align: center;
+  padding: 50px;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.bookmark-card img {
+  height: 400px;
+  object-fit: contain;
+  margin: 0;
+}
+
+.bookmark-card-container {
+  margin: auto;
+  padding-bottom: 0;
+}
+
+.bookmark-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  align-items: center;
+}
+
+.bookmark-card {
+  height: 400px;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 20px;
+  border: 1px solid rgb(230,230,230);
+}
+
+.bookmark-card .card-infos {
+  padding: 20px;
+  position: relative;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p.overview {
+  text-align: justify;
+  font-size: 14px;
+  font-style: italic;
+  padding-top: 10px;
+}
+
+.delete-btn {
+  text-align: center;
+  background-color: black;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+
+  &:hover {
+    text-decoration: none;
+    color: orangered;
+  }
+}
+
+p.btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+p.comment {
+  padding-top: 20px;
+  font-style: italic;
+}
+
+.redirect {
+  padding-top: 60px;
+}
+
+// FORMS
+
+.form-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  align-items: center;
+}
+
+.form {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 20px;
+  border: 1px solid rgb(230,230,230);
+}

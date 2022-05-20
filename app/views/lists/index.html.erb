@@ -1,13 +1,29 @@
+<thead>
+  <style></style>
+</thead>
 
 <tbody>
-<h1>Save any kind of movies</h1>
-<h2>classics</h2>
+  <div class="banner">
+    <div class="banner-container">
+        <h1 class="index-title">Save any kind of movies</h1>
+        <div class="button">
+          <%= link_to 'Create a new list', new_list_path, class: "create-btn" %>
+        </div>
+    </div>
+  </div>
 
+
+  <div class="card-container">
+      <h2>Your lists</h2>
+
+    <div class="cards">
     <% @lists.each do |list| %>
-      <tr>
-        <td><%= link_to list.name, list %></td>
-      </tr>
-    <% end %>
-    <br>
-    <%= link_to 'New List', new_list_path %>
+      <div class="card">
+        <div class="card-infos">
+          <h4><%= link_to list.name, list, class: "link-text" %></h4>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
   </tbody>
